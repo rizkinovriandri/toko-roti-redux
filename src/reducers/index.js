@@ -1,17 +1,13 @@
+// Import combineReducer untuk menggabungkan semua file reducer
 import { combineReducers } from 'redux';
 
-import buyOneDonutReducer from './buyOneDonatReducer';
-import makeOneDonutReducer from './makeOneDonutReducer';
-import buyOneCakeReducer from './buyOneCakeReducer';
-import makeOneCakeReducer from './makeOneCakeReducer';
 // Import all reducer
+import bahanReducer from './bahanReducer';
+import transactionReducer from './transactionReducer';
 
-// Combine all reducer
 const rootReducer = combineReducers({
-  bahanDonut: makeOneDonutReducer,
-  bahanCake: makeOneCakeReducer,
-  donut: buyOneDonutReducer,
-  cake: buyOneCakeReducer,
+  bahan: bahanReducer,
+  transaction: transactionReducer,
 })
 
 export default rootReducer;
