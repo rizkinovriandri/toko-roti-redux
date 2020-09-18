@@ -17,6 +17,11 @@ const transactionReducer = (state = initialWallet, action) => {
       wallet: state.wallet - 12500
     }
     return newState
+  } else if (action.type === 'BELI_CAKE') {
+    const newState = {
+      wallet: state.wallet + 50000
+    }
+    return newState
   }
   return state;
 }

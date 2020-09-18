@@ -7,6 +7,8 @@ import store from './store';
 // Import Action
 import buatDonatAction from './actions/buatDonatAction';
 import beliDonatAction from './actions/beliDonatAction';
+import buatCakeAction from './actions/buatCakeAction';
+import beliCakeAction from './actions/beliCakeAction';
 
 const App = () => {
 
@@ -47,8 +49,16 @@ const App = () => {
     store.dispatch(buatDonatAction)
   }
 
+  const handleBuatCake = () => {
+    store.dispatch(buatCakeAction)
+  }
+
   const handleBeliDonat = () => {
     store.dispatch(beliDonatAction);
+  }
+
+  const handleBeliCake = () => {
+    store.dispatch(beliCakeAction);
   }
 
   return (
@@ -71,11 +81,11 @@ const App = () => {
       </div>
       <div className="action">
         <button type="button" onClick={handleBuatDonat}>Buat Donat</button>
-        <button type="button">Buat Cake</button>
+        <button type="button" onClick={handleBuatCake}>Buat Cake</button>
       </div>
       <div className="action">
         <button type="button" onClick={handleBeliDonat}>Beli Donat</button>
-        <button type="button">Beli Cake</button>
+        <button type="button" onClick={handleBeliCake}>Beli Cake</button>
       </div>
     </div>
   );
